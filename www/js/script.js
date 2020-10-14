@@ -1,6 +1,25 @@
 "use strict";
 
 $(document).ready(function () {
+  var choiseLangBtn = document.querySelector('#language-btn');
+
+  if (choiseLangBtn) {
+    var openChoiseLang = function openChoiseLang(event) {
+      this.classList.toggle('language__lang--active');
+      this.parentNode.querySelector('.language__choise-block').classList.toggle('language__choise-block--active');
+    };
+
+    var closeChoiseLang = function closeChoiseLang(event) {
+      if (!event.target.closest('.language')) {
+        choiseLangBtn.classList.remove('language__lang--active');
+        choiseLangBtn.parentNode.querySelector('.language__choise-block').classList.remove('language__choise-block--active');
+      }
+    };
+
+    choiseLangBtn.addEventListener('click', openChoiseLang);
+    document.addEventListener('click', closeChoiseLang);
+  }
+
   $('#promo-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

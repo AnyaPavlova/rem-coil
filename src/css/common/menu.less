@@ -48,15 +48,11 @@
     }
 }
 @media screen and (min-width: 961px)  {
-    .menu__link:hover {
+    .menu__item:hover .menu__link {
         color: @color-orange;
     }
-    .menu__link:hover .menu__link-more svg {
+    .menu__item:hover .menu__link .menu__link-more svg {
         fill: @color-orange;
         transform: rotate(-180deg);
     }
-}
-.submenu {
-    position: absolute;
-    display: none;
 }
