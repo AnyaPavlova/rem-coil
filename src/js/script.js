@@ -23,6 +23,12 @@ $(document).ready(function () {
             {
                 breakpoint: 1380,
                 settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
                     slidesToShow: 3
                 }
             }
